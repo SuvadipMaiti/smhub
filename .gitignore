@@ -1,5 +1,5 @@
 client/node_modules
-client/src/helpers/urlConfig.js
+client/src/helpers/urlConfig.prod.js
 
 server/.env.prod
 server/.env
