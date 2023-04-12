@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +20,9 @@
     "express-async-handler": "^1.2.0",
     "express-fileupload": "^1.4.0",
     "fastest-validator": "^1.16.0",
+    "helmet": "^6.1.5",
     "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
     "morgan": "^1.10.0",
     "mysql2": "^3.2.0",
     "nodemon": "^2.0.22",

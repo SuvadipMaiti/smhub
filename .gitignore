@@ -1,2 +1,6 @@
-/node_modules
-.env
+client/node_modules
+client/src/helpers/urlConfig.js
+
+server/.env.prod
+server/.env
+server/.dev

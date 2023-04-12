@@ -1,4 +1,4 @@
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 import mongoose from 'mongoose';
 import db from './src/models/mysql/index.js';
 import { Server } from "socket.io";
