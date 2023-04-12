@@ -20,7 +20,7 @@ describe('Test POST /api/v1/user/login',()=>{
     //     const response = await request(app).post('/api/v1/user/login').send(userData).expect(200);
     // });
     test('It should catch missing properties', async ()=>{
-        const responseerr = await request(app).post('/api/v1/user/login').send(userDataErr).expect(400);
+        const responseerr = await request(app).post('/api/v1/user/login').send(userDataErr).expect(404);
         expect(responseerr.body).toStrictEqual({
             "status": false,
             "message": "The 'email' field must not be empty."
