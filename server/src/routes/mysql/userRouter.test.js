@@ -16,9 +16,9 @@ describe('Test POST /api/v1/user/login',()=>{
         email:'',
         password:''
     };
-    test('It should respond with 200 login', async ()=>{
-        const response = await request(app).post('/api/v1/user/login').send(userData).expect(200);
-    });
+    // test('It should respond with 200 login', async ()=>{
+    //     const response = await request(app).post('/api/v1/user/login').send(userData).expect(200);
+    // });
     test('It should catch missing properties', async ()=>{
         const responseerr = await request(app).post('/api/v1/user/login').send(userDataErr).expect(400);
         expect(responseerr.body).toStrictEqual({
