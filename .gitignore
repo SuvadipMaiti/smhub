@@ -3,4 +3,4 @@ client/src/helpers/urlConfig.js
 
 server/.env.prod
 server/.env
-server/.dev
+server/.env.dev
