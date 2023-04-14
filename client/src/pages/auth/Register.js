@@ -3,14 +3,13 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { registerAsync } from '../../redux/slices/AuthSlice';
-import { UilLock } from '@iconscout/react-unicons'
+import { UilLock } from '@iconscout/react-unicons';
 
 const Register = () => {
   let url = '#';
   let navigate = useNavigate();
 
   const dispatch = useDispatch();
-
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -23,7 +22,7 @@ const Register = () => {
       email,
       password,
     };
-    dispatch(registerAsync({userData,navigate,toast}));
+    dispatch(registerAsync({ userData, navigate, toast }));
   };
 
   return (
@@ -31,16 +30,26 @@ const Register = () => {
       <div className="loginform">
         <form>
           <div className="heading">
-            <UilLock/>
+            <UilLock />
             <h4>Register Form</h4>
           </div>
           <div className="form-group">
             <label>Name</label>
-            <input type="text" placeholder="Name" className="form-control" onChange={(e) => setName(e.target.value)} />
+            <input
+              type="text"
+              placeholder="Name"
+              className="form-control"
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <div className="form-group">
             <label>Email</label>
-            <input type="email" placeholder="Email" className="form-control" onChange={(e) => setEmail(e.target.value)} />
+            <input
+              type="email"
+              placeholder="Email"
+              className="form-control"
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className="form-group">
             <label>Password</label>
@@ -52,12 +61,18 @@ const Register = () => {
             />
           </div>
           <div className="action">
-            <button className="btn btn-primary" onClick={signUpSubmit} >Register</button>
+            <button className="btn btn-primary" onClick={signUpSubmit}>
+              Register
+            </button>
           </div>
         </form>
         <div className="social-login front-small">
-          <a href='/login' className="btn btn-primary">Login</a>
-          <a href={url} className="btn">Forgot Password</a>
+          <Link to={'/login'} className="btn btn-primary">
+            Login
+          </Link>
+          <Link to={'/'} className="btn">
+            Forgot Password
+          </Link>
         </div>
       </div>
     </>

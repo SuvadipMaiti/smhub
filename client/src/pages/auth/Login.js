@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import GoogleLoginComponent from '../../components/GoogleLoginComponent';
 import { loginAsync } from '../../redux/slices/AuthSlice';
 import { gapi } from 'gapi-script';
-import { UilLockOpenAlt } from '@iconscout/react-unicons'
+import { UilLockOpenAlt } from '@iconscout/react-unicons';
 
 const Login = () => {
   let url = '#';
@@ -17,15 +17,16 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  useEffect(()=>{
-    function start(){
+  useEffect(() => {
+    function start() {
       gapi.client.init({
-        clientId: "252000336971-arqb03m2qj1r7onavl9627jarqqorbpq.apps.googleusercontent.com",
-        scope: ""
-      })
-    };
-    gapi.load('client:auth2',start);
-  })
+        clientId:
+          '252000336971-arqb03m2qj1r7onavl9627jarqqorbpq.apps.googleusercontent.com',
+        scope: '',
+      });
+    }
+    gapi.load('client:auth2', start);
+  });
 
   const loginSubmit = (event) => {
     event.preventDefault();
@@ -36,13 +37,12 @@ const Login = () => {
     dispatch(loginAsync({ userData, navigate, toast }));
   };
 
-
   return (
     <>
       <div className="loginform">
         <form>
           <div className="heading">
-            <UilLockOpenAlt/>
+            <UilLockOpenAlt />
             <h4>Login Form</h4>
           </div>
           {/* <!-- search bar --> */}
@@ -72,15 +72,15 @@ const Login = () => {
         </form>
         <div className="social-icon">
           {/* <FacebookLoginComponent /> */}
-          <GoogleLoginComponent/>
+          <GoogleLoginComponent />
         </div>
         <div className="social-login front-small">
-          <a href="/register" className="btn btn-primary">
+          <Link to={'/register'} className="btn btn-primary">
             Register
-          </a>
-          <a href={url} className="btn">
+          </Link>
+          <Link to={'/'} className="btn">
             Forgot Password
-          </a>
+          </Link>
         </div>
       </div>
     </>
