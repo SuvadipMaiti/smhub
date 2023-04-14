@@ -1,6 +1,8 @@
 client/node_modules
+client/build
 client/src/helpers/urlConfig.prod.js
 
+server/node_modules
 server/.env.prod
 server/.env
 server/.env.dev
