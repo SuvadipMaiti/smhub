@@ -12,7 +12,7 @@ jobs:
       matrix:
         node-version: [18.x]
         mongodb-version: ['4.4']
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
       - name:  Use Node.js version ${{matrix.node-version}}
