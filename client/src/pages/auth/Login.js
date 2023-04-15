@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 // import FacebookLoginComponent from '../../components/FacebookLoginComponent';
 import GoogleLoginComponent from '../../components/GoogleLoginComponent';
@@ -9,7 +9,6 @@ import { gapi } from 'gapi-script';
 import { UilLockOpenAlt } from '@iconscout/react-unicons';
 
 const Login = () => {
-  let url = '#';
   let navigate = useNavigate();
 
   const dispatch = useDispatch();

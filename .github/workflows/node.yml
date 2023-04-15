@@ -6,6 +6,7 @@ on:
     branches: [main]
 jobs:
   build:
+    runs-on: self-hosted
     env:
       CI: true
       MONGO_URL: mongodb://localhost/smhub

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { registerAsync } from '../../redux/slices/AuthSlice';
 import { UilLock } from '@iconscout/react-unicons';
 
 const Register = () => {
-  let url = '#';
   let navigate = useNavigate();
 
   const dispatch = useDispatch();
