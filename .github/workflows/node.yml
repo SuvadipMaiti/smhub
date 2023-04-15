@@ -6,13 +6,13 @@ on:
     branches: [main]
 jobs:
   build:
-    runs-on: self-hosted
     env:
       CI: true
-      MONGO_URL: mongodb://localhost/smhub
     strategy:
       matrix:
         node-version: [18.x]
+        mongodb-version: ['4.4']
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name:  Use Node.js version ${{matrix.node-version}}
